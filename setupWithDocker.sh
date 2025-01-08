@@ -129,7 +129,7 @@ sudo certbot --nginx -d "$api_domain"
 # Add Nginx configuration from README.md
 echo "Extracting Nginx configuration from README.md..."
 config_file="/etc/nginx/sites-available/custom-domain.conf"
-sed -n '/#### BELOW THIS LINE ####/{n; :a; /#### ABOVE THIS LINE ####/!{p; n; ba}}' "./README.md" | sudo tee "$config_file" > /dev/null
+sed -n '/#### BELOW THIS LINE ####/{n; :a; /#### ABOVE THIS LINE ####/!{p; n; ba}}' "./ReadME.md" | sudo tee "$config_file" > /dev/null
 
 # Create soft-link in sites-enabled
 cd /etc/nginx/sites-enabled
